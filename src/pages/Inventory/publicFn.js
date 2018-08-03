@@ -21,6 +21,7 @@ function setContentHeight() {
     　　return scrollTop;
 }
 
+
 //浏览器视口的高度
  function getWindowHeight(){
     　　var windowHeight = 0;
