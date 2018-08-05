@@ -13,11 +13,11 @@ const env = process.env.NODE_ENV;
 
 
 axios.defaults.withCredentials = true;
-axios.defaults.headers={
-  'Accept': '*',
-  'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8',
-  "Cookie": document.cookie
-};
+// axios.defaults.headers={
+//   'Accept': '*',
+//   'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8',
+//   "Cookie": document.cookie
+// };
 axios.defaults.mode = 'cors';
 
 

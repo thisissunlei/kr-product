@@ -59,7 +59,8 @@ const devWebpackConfig = merge(baseWebpackConfig, {
       template: 'index.html',
       inject: true,
       files: {
-        js:pluginsDomain
+        js:pluginsDomain.jsFiles,
+        css:pluginsDomain.cssFiles,
       },
     }),
     // copy custom static assets

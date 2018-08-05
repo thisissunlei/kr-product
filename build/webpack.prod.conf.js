@@ -80,8 +80,9 @@ const webpackConfig = merge(baseWebpackConfig, {
       },
       // necessary to consistently work with multiple chunks via CommonsChunkPlugin
       files: {
-        js:pluginsDomain,
-        favicon:pluginsDomain + '/plugins/public/images/favicon.ico'
+        js:pluginsDomain.jsFiles,
+        css:pluginsDomain.cssFiles,
+        favicon:'/plugins/public/images/favicon.ico'
       },
       chunksSortMode: 'dependency'
     }),
