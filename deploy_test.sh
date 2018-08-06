@@ -58,4 +58,4 @@ esac
 echo $1
 echo $target_site
 
-rsync -cza --delete-before  -e "ssh -p ${target_site_port}"  ./dist/* ${target_site}:/data/work/frontend/kr-project/ >/dev/null
+rsync -cza --delete-before  -e "ssh -p ${target_site_port}"  ./dist/* ${target_site}:/data/work/frontend/kr-product/ >/dev/null
