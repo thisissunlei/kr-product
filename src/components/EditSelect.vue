@@ -98,7 +98,7 @@
 
 
 <script>
-import http from '~/plugins/http';
+
 
     export default {
         props:{
@@ -124,7 +124,7 @@ import http from '~/plugins/http';
                 options:this.data
             };
         },
-         mounted:function(){
+        mounted:function(){
         },
         methods: {
             showEdit(){

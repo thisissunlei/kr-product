@@ -62,7 +62,6 @@
 
 
 <script>
-// import http from '~/plugins/http';
 import utils from '~/plugins/utils';
 import KrImg from './KrImg';
 import PhotoAlbum from './PhotoAlbum';

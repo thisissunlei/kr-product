@@ -35,7 +35,6 @@
 
 
 <script>
-import http from '~/plugins/http';
 
 export default {
     props: {
@@ -151,7 +150,7 @@ export default {
             let list = [];
             let _this = this;
             console.log("jjjjjj")
-            http.get('get-salechance', parms, r => {
+            this.$http.get('get-salechance', parms, r => {
 
                 r.data.items.data.map(item => {
                     list.push({

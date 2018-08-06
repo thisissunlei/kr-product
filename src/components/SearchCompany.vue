@@ -26,7 +26,6 @@
 
 
 <script>
-import http from '~/plugins/http';
 
     export default {
         props:{
@@ -59,7 +58,7 @@ import http from '~/plugins/http';
                 }
                 let list = [];
                 let _this = this;
-                http.get('get-payment-customer-like', params).then( r => {
+                this.$http.get('get-payment-customer-like', params).then( r => {
                     list = r.data.items;
                     list.map((item)=>{
                         let obj = item;
