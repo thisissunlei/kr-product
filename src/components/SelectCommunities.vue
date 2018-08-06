@@ -10,7 +10,6 @@
 <script>
 
 
-import http from '~/plugins/http';
 
     export default {
         props:["onchange","test","value","disabled"],

@@ -10,7 +10,6 @@
 <script>
 
 
-import http from '~/plugins/http';
 
 
     export default {
@@ -53,7 +52,7 @@ import http from '~/plugins/http';
             }
             let list = [];
             let _this = this;
-            http.get(this.url, params, r => {
+            this.$http.get(this.url, params, r => {
                 list = r.data.customerList;
                 list.map((item) => {
                     let obj = item;

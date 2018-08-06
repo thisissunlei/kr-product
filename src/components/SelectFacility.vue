@@ -29,7 +29,6 @@
 
 
 <script>
-import http from '~/plugins/http';
 
     export default {
         props:{
@@ -65,7 +64,7 @@ import http from '~/plugins/http';
                 }
                 let list = [];
                 let _this = this;
-                http.get('get-facility-type', params, r => {
+                this.$http.get('get-facility-type', params, r => {
                     list = r.data;
                    
                     _this.loading1 = false;

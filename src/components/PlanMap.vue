@@ -26,7 +26,6 @@
 
 
 import Map from '~/plugins/Map.js';
-import http from '~/plugins/http';
 
 
     export default {
@@ -122,7 +121,7 @@ import http from '~/plugins/http';
 				let params = this.params;
 				let selectedObjs = []
 				let _this = this;
-				http.get('getplanmap', params, r => {
+				this.$http.get('getplanmap', params, r => {
 					let response = r.data;
 					let floors = [];
 					let name = "";

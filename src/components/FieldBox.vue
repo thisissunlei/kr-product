@@ -94,7 +94,6 @@
 
 
 <script>
-import http from '~/plugins/http';
 
     export default {
         props:{
