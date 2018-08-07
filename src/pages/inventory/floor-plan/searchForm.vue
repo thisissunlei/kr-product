@@ -166,6 +166,9 @@ export default {
 
 <style lang="less"> 
     .floor-map-search{
+        //苏岭
+         display: inline-table;
+         word-spacing: -4px;
         .daily-form{
             display:inline-block;
             .ivu-form-item-content{

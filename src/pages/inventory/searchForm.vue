@@ -494,6 +494,9 @@ export default {
 
 <style lang='less'>
      .daily-search-form{
+         //苏岭
+         display: inline-table;
+         word-spacing: -4px;
          .daily-header{
             padding: 30px 10px 10px 20px;
             .ivu-form .ivu-form-item-label{

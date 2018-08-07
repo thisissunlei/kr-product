@@ -195,7 +195,6 @@ export default {
         var dom=document.getElementById('layout-content-main');
         dom.addEventListener("scroll",this.onScrollListener);
         window.addEventListener('resize',this.onResize);  
-        this.tableCommon();
         var _this=this;
         LISTENSIDEBAROPEN(function (params) {
             _this.sideBar=params;
@@ -203,7 +202,6 @@ export default {
     },
     watch:{
         sideBar:function(val){
-            this.tableCommon();
             this.onScrollListener();
         }
     },
@@ -221,13 +219,13 @@ export default {
         }  
       },
       onResize(){
-            this.tableCommon();
             this.onScrollListener();
       },
       //滚动监听
       onScrollListener(){            
             var dom=document.getElementById('layout-content-main');
             var headDom=document.querySelectorAll('div.slot-head-attract-investment')[0];
+            this.tableCommon();
             if(headDom){
                 headDom.style.left=this.left+'px';
                 headDom.style.width=this.width+'px';
@@ -275,6 +273,7 @@ export default {
     }
 }
 </script>
+
 
 <style lang='less'>
      .attract-investment{
