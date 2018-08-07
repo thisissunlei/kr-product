@@ -3,7 +3,7 @@ const path = require('path')
 const config = require('../config')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const packageConfig = require('../package.json')
-//公共路径
+
 exports.assetsPath = function (_path) {
   const assetsSubDirectory = process.env.NODE_ENV === 'production'
     ? config.build.assetsSubDirectory
@@ -72,8 +72,7 @@ exports.styleLoaders = function (options) {
   const loaders = exports.cssLoaders(options)
 
   for (const extension in loaders) {
-    const loader = loaders[extension].split('!')
-    loader.splice(2,0,'!autoprefixer-loader?browsers=last 7 version')
+    const loader = loaders[extension]
     output.push({
       test: new RegExp('\\.' + extension + '$'),
       use: loader

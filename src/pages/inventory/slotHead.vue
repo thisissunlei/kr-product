@@ -61,7 +61,6 @@
             width:100%;
             -moz-box-flex: 1; 
             -webkit-box-flex: 1; 
-            transform: translate(30px);
             box-flex:1;
             border-left: solid 1px #e9eaec;
         }
