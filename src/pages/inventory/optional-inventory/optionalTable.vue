@@ -215,11 +215,6 @@ export default {
             this.getTableData(this.tabForms); 
         }  
         var dom=document.getElementById('layout-content-main');
-        var dailyTableDom=document.getElementById('optional-inventory-table-list');
-        if(dailyTableDom){
-            this.left=dailyTableDom.getBoundingClientRect().left;
-            this.width=dailyTableDom.getBoundingClientRect().width;
-        }
         dom.addEventListener("scroll",this.onScrollListener);
         window.addEventListener('resize',this.onResize);  
         var _this=this;
@@ -229,9 +224,6 @@ export default {
     },
     watch:{
         sideBar:function(val){
-            var dailyTableDom=document.getElementById('optional-inventory-table-list');
-            this.left=dailyTableDom.getBoundingClientRect().left;
-            this.width=dailyTableDom.getBoundingClientRect().width;
             this.onScrollListener();
         }, 
         tabForms:function(val,old){
@@ -245,11 +237,15 @@ export default {
         window.removeEventListener('resize',this.onResize);  
     },
     methods:{
+        tableCommon(){
+            var dailyTableDom=document.getElementById('optional-inventory-table-list');
+            if(dailyTableDom){
+                this.left=dailyTableDom.getBoundingClientRect().left;
+                this.width=dailyTableDom.getBoundingClientRect().width;
+            }  
+        },
         onResize(){
-           var dailyTableDom=document.getElementById('optional-inventory-table-list');
-            this.left=dailyTableDom.getBoundingClientRect().left;
-            this.width=dailyTableDom.getBoundingClientRect().width;
-            this.onScrollListener(); 
+           this.onScrollListener(); 
         },
         //获取列表数据
         getTableData(values){
@@ -313,6 +309,7 @@ export default {
         onScrollListener(){  
             var dom=document.getElementById('layout-content-main');
             var headDom=document.getElementById('slot-head-optional-inventory');
+            this.tableCommon();
             if(headDom){
                 headDom.style.left=this.left+'px';
                 headDom.style.width=this.width+'px';
