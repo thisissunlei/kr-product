@@ -2,11 +2,11 @@ import Vue from 'vue'
 import Router from 'vue-router'
 Vue.use(Router)
 
-const GoodsLibrary = () => import('pages/inventory/goods-library')
-const DailyInventory = () => import('pages/inventory/daily-inventory')
-const OptionalInventory = () => import('pages/inventory/optional-inventory')
-const FloorPlan = () => import('pages/inventory/floor-plan')
-const AttractInvestment = () => import('pages/community/attract-investment')
+const GoodsLibrary = () => import('pages/inventory/goods-library/index.vue')
+const DailyInventory = () => import('pages/inventory/daily-inventory/index.vue')
+const OptionalInventory = () => import('pages/inventory/optional-inventory/index.vue')
+const FloorPlan = () => import('pages/inventory/floor-plan/index.vue')
+const AttractInvestment = () => import('pages/community/attract-investment/index.vue')
 export default new Router({
   routes: [
     {
