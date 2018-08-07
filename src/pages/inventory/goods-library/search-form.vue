@@ -527,6 +527,9 @@ export default {
 
 <style lang='less'>
      .goods-search-form{
+         //苏岭
+         display: inline-table;
+         word-spacing: -4px;
          .community-header{
              background: #f5f7f9;
             //padding: 30px 10px 10px 20px;
