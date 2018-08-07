@@ -72,7 +72,8 @@ exports.styleLoaders = function (options) {
   const loaders = exports.cssLoaders(options)
 
   for (const extension in loaders) {
-    const loader = loaders[extension]
+    const loader = loaders[extension].split('!')
+    loader.splice(2,0,'!autoprefixer-loader?browsers=last 7 version')
     output.push({
       test: new RegExp('\\.' + extension + '$'),
       use: loader
