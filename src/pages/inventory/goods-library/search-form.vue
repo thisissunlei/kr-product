@@ -1,5 +1,5 @@
 <template>
-    <div class='community-search-form'>
+    <div class='goods-search-form'>
         <div class="community-header">
             <Form ref="formItemInvestment" :model="formItem" :rules="ruleInvestment" label-position="left">
 
@@ -526,7 +526,7 @@ export default {
 </script>
 
 <style lang='less'>
-     .community-search-form{
+     .goods-search-form{
          .community-header{
              background: #f5f7f9;
             //padding: 30px 10px 10px 20px;
