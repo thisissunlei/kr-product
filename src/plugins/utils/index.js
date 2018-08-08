@@ -177,6 +177,20 @@ import deepCopy from './deepCopy';
         return cached;
     }
 
+    //创建dom
+    function createElement(){
+        var dom=document.createElement('span');
+        dom.style.visibility='hidden';
+        document.body.appendChild(dom);
+        return dom;
+    }
+    
+    //计算字符串长度
+    function getStrWidth(dom,data){
+        dom.innerHTML=data;
+        return dom.offsetWidth;
+    }
+
     //时间差
     function timeRange(sDate1,sDate2){
         var aDate, oDate1, oDate2, iDays;
@@ -211,7 +225,9 @@ export default{
     downImg,
     timeRange,
     smalltoBIG,
-    deepCopy
+    deepCopy,
+    createElement,
+    getStrWidth
 }
 
 
