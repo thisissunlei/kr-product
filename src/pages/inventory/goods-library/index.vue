@@ -92,6 +92,7 @@
             width="530"
             v-model="priceOpen"
             title="修改定价"
+            class-name="m-clear-footer"
         >
             <ChangePrice 
               v-if="priceOpen"
