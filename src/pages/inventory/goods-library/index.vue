@@ -92,6 +92,7 @@
             width="530"
             v-model="priceOpen"
             title="修改定价"
+            class-name="m-clear-footer"
         >
             <ChangePrice 
               v-if="priceOpen"
@@ -1163,6 +1164,7 @@ export default {
                     this.attractData=response.data.items;           
                     this.name=response.data;    
                     this.loading=false;
+                    this.statusData=[];
                 }).catch((error)=>{
                     this.openMessage=true;
                     this.MessageType="error";
