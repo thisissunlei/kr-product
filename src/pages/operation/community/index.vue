@@ -2,7 +2,7 @@
     <div class="operation-community"> 
       <!-- 选择社区 -->
         <div class="community">
-          <img src="~/assets/images/main.png" alt="" style="margin:17.5px 20px;width:23px;">
+          <img src="/static/images/main.png" alt="" style="margin:17.5px 20px;width:23px;">
           <div class="city" style="width:100px;margin-right:15px;display:inline-block;vertical-align:top;">
             <Select v-model="city" >
               <Option v-for="types in optionList" :value="types.value" :key="types.value" >{{ types.label }}</Option>
@@ -18,14 +18,14 @@
         <div class="tab-list">
           <div class="card-one item"  v-on:click="openCustomer">
             <span class="content">
-              <img src="~/assets/images/custom.jpg" alt="" style="margin:15px auto;width:45px;height:30px;margin-top:20px;">
+              <img src="/static/images/custom.jpg" alt="" style="margin:15px auto;width:45px;height:30px;margin-top:20px;">
             </span>
             <span class="content title">在驻客户</span>
             <span class="content number"><span>{{pageData.settledCustomer}}</span>个</span>
           </div>
           <div class="card-two item">
             <span class="content">
-              <img src="~/assets/images/member.png" alt="" style="margin:12px auto;width:36px;height:33px;margin-top:20px;">
+              <img src="/static/images/member.png" alt="" style="margin:12px auto;width:36px;height:33px;margin-top:20px;">
             </span>
             <span class="content title">在驻会员</span>
             <span class="content number"><span>{{pageData.settledMember}}</span>位</span>
@@ -103,7 +103,7 @@
                 </div>
               </div>
               <div class="contents" style="text-align:center" v-if="!list.length">
-                <img src="~/assets/images/none.png" alt="" style="width:106px;margin-top:30px">
+                <img src="/static/images/none.png" alt="" style="width:106px;margin-top:30px">
                 <div style="font-size: 14px;color: #666666;margin-top:15px;">还没有即将入驻的客户！只展示已生效的</div>
               </div>
 
@@ -141,7 +141,7 @@
                 </div>
               </div>
               <div class="contents" style="text-align:center" v-if="!DueList.length">
-                <img src="~/assets/images/none.png" alt="" style="width:106px;margin-top:30px">
+                <img src="/static/images/none.png" alt="" style="width:106px;margin-top:30px">
                 <div style="font-size: 14px;color: #666666;margin-top:15px;">还没有入驻的客户哦！</div>
               </div>
               <div class="contents" v-if="DueList.length">
@@ -179,7 +179,7 @@
                 </div>
               </div>
               <div class="contents" style="text-align:center" v-if="!unpaidList.length">
-                <img src="~/assets/images/none.png" alt="" style="width:106px;margin-top:30px">
+                <img src="/static/images/none.png" alt="" style="width:106px;margin-top:30px">
                 <div style="font-size: 14px;color: #666666;margin-top:15px;">没有已过服务开始日仍未付的账单</div>
               </div>
               <div class="contents" v-if="unpaidList.length">
@@ -213,7 +213,7 @@
                 </div>
               </div>
               <div class="contents" style="text-align:center" v-if="!OverdueStation.length">
-                <img src="~/assets/images/none.png" alt="" style="width:106px;margin-top:30px">
+                <img src="/static/images/none.png" alt="" style="width:106px;margin-top:30px">
                 <div style="font-size: 14px;color: #666666;margin-top:15px;">没有已过最晚付款日未付的账单（不含已过服务开始日的）</div>
               </div>
               <div class="contents" v-if="OverdueStation.length">
@@ -247,7 +247,7 @@
                 </div>
               </div>
               <div class="contents" style="text-align:center" v-if="!OverdueMeeting.length">
-                <img src="~/assets/images/none.png" alt="" style="width:106px;margin-top:30px">
+                <img src="/static/images/none.png" alt="" style="width:106px;margin-top:30px">
                 <div style="font-size: 14px;color: #666666;margin-top:15px;">太棒了！没有逾期的会议室账单</div>
               </div>
               <div class="contents" v-if="OverdueMeeting.length">
@@ -281,7 +281,7 @@
                 </div>
               </div>
               <div class="contents" style="text-align:center" v-if="!OverduePrint.length">
-                <img src="~/assets/images/none.png" alt="" style="width:106px;margin-top:30px">
+                <img src="/static/images/none.png" alt="" style="width:106px;margin-top:30px">
                 <div style="font-size: 14px;color: #666666;margin-top:15px;">太棒了！没有逾期的打印账单</div>
               </div>
               <div class="contents" v-if="OverduePrint.length">
@@ -315,7 +315,7 @@
                 </div>
               </div>
               <div class="contents" style="text-align:center" v-if="!OverdueOperationList.length">
-                <img src="~/assets/images/none.png" alt="" style="width:106px;margin-top:30px">
+                <img src="/static/images/none.png" alt="" style="width:106px;margin-top:30px">
                 <div style="font-size: 14px;color: #666666;margin-top:15px;">没有逾期未生效或未作废的合同</div>
               </div>
               <div class="contents" v-if="OverdueOperationList.length">
@@ -349,7 +349,7 @@
                 </div>
               </div>
               <div class="contents" style="text-align:center"  v-if="!appointment.length">
-                <img src="~/assets/images/waiting.png" alt="" style="width:106px;margin-top:30px">
+                <img src="/static/images/waiting.png" alt="" style="width:106px;margin-top:30px">
                 <div style="font-size: 14px;color: #666666;margin-top:15px;">小哥哥小姐姐正在尽全力开发，敬请期待哦亲~</div>
               </div>
                   <div class="contents" v-if="appointment.length">
@@ -384,7 +384,7 @@
                 </div>
               </div>
               <div class="contents" style="text-align:center" v-if="!nappointment.length">
-                <img src="~/assets/images/none.png" alt="" style="width:106px;margin-top:30px">
+                <img src="/static/images/none.png" alt="" style="width:106px;margin-top:30px">
                 <div style="font-size: 14px;color: #666666;margin-top:15px;">暂没有访客(入驻会员在APP上邀请来的)</div>
                 
               </div>
