@@ -431,7 +431,7 @@ export default {
          display:inline-block;
          width:16px;
          height:16px;
-         background:url('/static/images/use.svg') no-repeat center;
+         background:url('~/assets/images/use.svg') no-repeat center;
          background-size:100%;
          vertical-align: middle;
       }
@@ -439,7 +439,7 @@ export default {
          display:inline-block;
          width:16px;
          height:16px;
-         background:url('/static/images/can.svg') no-repeat center;
+         background:url('~/assets/images/can.svg') no-repeat center;
          background-size:100%;
          vertical-align: middle;
       }

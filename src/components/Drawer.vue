@@ -140,18 +140,18 @@
             background-size: 100% 100%;
         }
         .new{
-            background-image:url('/static/images/new_icon.svg') ;
+            background-image:url('~/assets/images/new_icon.svg') ;
         }
         .editor{
-             background-image:url('/static/images/editor_icon.svg') ;
+             background-image:url('~/assets/images/editor_icon.svg') ;
         }
         .view{
-             background-image:url('/static/images/view_icon.svg') ;
+             background-image:url('~/assets/images/view_icon.svg') ;
         }
         .u-close{
             width:20px;
             height: 20px;
-            background:url('/static/images/close.svg') no-repeat center center;
+            background:url('~/assets/images/close.svg') no-repeat center center;
             float: right;
             vertical-align: -3px;
         }

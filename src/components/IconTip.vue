@@ -36,7 +36,7 @@ export default{
 	.u-icon{
         width:12px;
         height:12px;
-        background:url('/static/images/icontip.svg') no-repeat center;
+        background:url('~/assets/images/icontip.svg') no-repeat center;
         background-size: contain; 
         &:hover+.u-show{
             display: inline-block;
