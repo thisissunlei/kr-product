@@ -37,7 +37,7 @@ const cssFiles = [
     'https://web.krspace.cn/kr-op/iview/2.8.0/styles/iview.css',
     pluginsDomain+'/nav/1.0.0/nav.css',
     pluginsDomain+'/public/css/main.css' ,
-    pluginsDomain+'/plugins/public/images/favicon.ico' 
+    pluginsDomain+'/public/images/favicon.ico' 
 ]
 
 module.exports = {
