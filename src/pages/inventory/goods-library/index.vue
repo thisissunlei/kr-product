@@ -1164,6 +1164,7 @@ export default {
                     this.attractData=response.data.items;           
                     this.name=response.data;    
                     this.loading=false;
+                    this.statusData=[];
                 }).catch((error)=>{
                     this.openMessage=true;
                     this.MessageType="error";
