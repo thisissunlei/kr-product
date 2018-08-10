@@ -68,27 +68,15 @@ exports.cssLoaders = function (options) {
 
 // Generate loaders for standalone style files (outside of .vue)
 exports.styleLoaders = function (options) {
-  var output = [];
-  var loaders = exports.cssLoaders(options);
+  const output = []
+  const loaders = exports.cssLoaders(options)
 
-  for (var extension in loaders) {
-      // var loader = loaders[extension];
-      // 解决.js文件引入scss无法添加前缀问题
-      var loader = loaders[extension].split('!');
-      // 解决.js文件引入scss无法添加前缀问题
-      var isPreProcesser = ['less', 'sass', 'scss' ,'stylus', 'styl'].some(function (v) {
-          return v === extension
-      })
-      // 解决.js文件引入scss无法添加前缀问题
-      if (isPreProcesser) {
-          loader.splice(-1, 0, 'postcss-loader')
-      }
-      output.push({
-          test: new RegExp('\\.' + extension + '$'),
-          // loader: loader
-          // 解决.js文件引入scss无法添加前缀问题
-          loader: loader.join('!')
-      })
+  for (const extension in loaders) {
+    const loader = loaders[extension]
+    output.push({
+      test: new RegExp('\\.' + extension + '$'),
+      use: loader
+    })
   }
 
   return output
