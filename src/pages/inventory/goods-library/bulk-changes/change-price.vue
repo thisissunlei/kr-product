@@ -180,7 +180,7 @@ export default {
 
 <style lang='less'>
      .m-goods-price{
-          height: 400px;
+          height: 440px;
           .price-special{
               display:inline-block;
               width:200px;
