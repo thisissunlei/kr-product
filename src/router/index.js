@@ -7,6 +7,8 @@ const DailyInventory = () => import('pages/inventory/daily-inventory/index.vue')
 const OptionalInventory = () => import('pages/inventory/optional-inventory/index.vue')
 const FloorPlan = () => import('pages/inventory/floor-plan/index.vue')
 const AttractInvestment = () => import('pages/community/attract-investment/index.vue')
+const Community = () => import('pages/operation/community/index.vue')
+const VisitorsRecord = () => import('pages/operation/visitors-to-record/index.vue')
 export default new Router({
   routes: [
     {
@@ -33,6 +35,16 @@ export default new Router({
       path: '/community/attract-investment',
       name: 'AttractInvestment',
       component: AttractInvestment
+    },
+    {
+      path: '/operation/community',
+      name: 'Community',
+      component: Community
+    },
+    {
+      path: '/operation/visitors-to-record',
+      name: 'VisitorsRecord',
+      component: VisitorsRecord
     }
   ]
 })
