@@ -425,6 +425,7 @@ export default {
       .bar{
           position: relative;
           margin-bottom:5px;
+          background: #fff;
       }
       .m-use{
          display:inline-block;
