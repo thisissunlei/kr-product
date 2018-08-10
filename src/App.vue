@@ -9,9 +9,9 @@
         <div id="layout-content_id" class="layout-content" style="paddingLeft:180px;">
           <div id="layout-content-main" class="layout-content-main" :style="bodyStyle">
 
-            <div id="app">
+            
               <router-view/>
-            </div>
+           
 
           </div>
         </div>
