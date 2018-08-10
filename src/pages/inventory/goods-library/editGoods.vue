@@ -1,5 +1,5 @@
  <template>         
-     <Form ref="formItem" :model="formItem" style="text-align:left;padding-left:30px;" placeholder="请选择楼层" :rules="ruleInvestment"  label-position="top">
+     <Form ref="formItem" :model="formItem" style="text-align:left;padding-left:30px;" placeholder="请选择楼层" :rules="ruleInvestment"  label-position="top" class="floor-plan-edit">
 
                  <div style="color:red;margin-bottom:20px;">
                     下方数据编辑后立即生效，可能影响历史数据如有需要请下架商品再重新创建商品
@@ -251,9 +251,11 @@ import dateUtils from 'vue-dateutils';
 </script>
 
 <style lang='less'>
+ .floor-plan-edit{
    .daily-form{
                 display:inline-block;
                 margin-right:20px;
                
             }
+ }
 </style>  
