@@ -26,7 +26,7 @@ const envs = {
 }
 const pluginsDomain  = envs[process.env.NODE_ENV].plugins+'/plugins';
 const jsFiles = [
-    pluginsDomain+'/nav/nav.1.0.0.js',
+    pluginsDomain+'/nav/1.0.0/nav.js',
     'https://web.krspace.cn/kr-op/echarts/4.1.0/echarts.min.js',
     'https://web.krspace.cn/kr-op/umeditor/ueditor.config.js',
     'https://web.krspace.cn/kr-op/umeditor/ueditor.all.js',
@@ -35,6 +35,7 @@ const jsFiles = [
 const cssFiles = [
     // pluginsDomain+'/iview/2.8.0/styles/iview.css' ,
     'https://web.krspace.cn/kr-op/iview/2.8.0/styles/iview.css',
+    pluginsDomain+'/nav/1.0.0/nav.css',
     pluginsDomain+'/public/css/main.css' ,
     pluginsDomain+'/plugins/public/images/favicon.ico' 
 ]
