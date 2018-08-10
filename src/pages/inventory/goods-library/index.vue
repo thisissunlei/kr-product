@@ -1255,7 +1255,4 @@ export default {
             }
         }
      }
-     .ww{
-         color: black;
-     }
 </style>
