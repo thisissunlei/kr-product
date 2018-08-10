@@ -1,5 +1,6 @@
- <template>         
-     <Form ref="formItem" :model="formItem" style="text-align:left;padding-left:30px;" placeholder="请选择楼层" :rules="ruleInvestment"  label-position="top" class="floor-plan-edit">
+ <template>   
+   <div class="floor-plan-edit">      
+     <Form ref="formItem" :model="formItem" style="text-align:left;padding-left:30px;" placeholder="请选择楼层" :rules="ruleInvestment"  label-position="top">
 
                  <div style="color:red;margin-bottom:20px;">
                     下方数据编辑后立即生效，可能影响历史数据如有需要请下架商品再重新创建商品
@@ -96,7 +97,8 @@
                       </Form-item>
                       <div>启用状态、物理空间、平面图配置可在列表中直接点击操作</div>
             </Form>   
-        </template>
+        </div>
+     </template>
 <script>
 import dateUtils from 'vue-dateutils';
     export default{
@@ -253,9 +255,9 @@ import dateUtils from 'vue-dateutils';
 <style lang='less'>
  .floor-plan-edit{
    .daily-form{
-                display:inline-block;
-                margin-right:20px;
-               
-            }
+            display:inline-block;
+            margin-right:20px;
+            
+    }
  }
 </style>  

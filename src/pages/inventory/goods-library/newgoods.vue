@@ -1,4 +1,5 @@
- <template>         
+ <template> 
+  <div class="floor-plan-add">         
      <Form ref="formItem" :model="formItem" style="text-align:left;padding-left:30px;" placeholder="请选择楼层" :rules="ruleInvestment"  label-position="top">
 
             
@@ -91,7 +92,8 @@
                                 @keyup.enter.native="onKeyEnter($event)"
                             />
                       </Form-item>
-    </Form>   
+    </Form>  
+ </div> 
 </template>
 <script>
 import dateUtils from 'vue-dateutils';
@@ -251,9 +253,11 @@ import dateUtils from 'vue-dateutils';
 </script>
 
 <style lang='less'>
+ .floor-plan-add{
    .daily-form{
                 display:inline-block;
                 margin-right:20px;
                
             }
+ }
 </style>  
