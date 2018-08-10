@@ -145,7 +145,7 @@ export default {
          .blueFlag{
             width:26px;
             height:29px;
-            background:url(images/project.png) no-repeat center;
+            background:url(./images/project.png) no-repeat center;
             background-size: contain;
             span{
                 display:inline-block;
@@ -163,7 +163,7 @@ export default {
         .yellowFlag{
             width:26px;
             height:29px;
-            background:url(images/actual.png) no-repeat center;
+            background:url(./images/actual.png) no-repeat center;
             background-size: contain;
             span{
                 display:inline-block;

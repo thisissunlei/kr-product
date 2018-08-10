@@ -347,7 +347,7 @@ export default {
             display:inline-block;
             width:19px;
             height:23px;
-            background:url(img/warning.png) no-repeat center;
+            background:url('./img/warning.png') no-repeat center;
             background-size: 100%;
             margin-right:6px;
             vertical-align: middle;
@@ -388,7 +388,7 @@ export default {
               width:10px;
               height:10px;
               font-size: 14px;
-              background:url(img/close.png) no-repeat center;
+              background:url('./img/close.png') no-repeat center;
               background-size:100%;
               cursor: pointer;
           }
@@ -431,7 +431,7 @@ export default {
          display:inline-block;
          width:16px;
          height:16px;
-         background:url('~/assets/images/use.svg') no-repeat center;
+         background:url('img/use.svg') no-repeat center;
          background-size:100%;
          vertical-align: middle;
       }
@@ -439,7 +439,7 @@ export default {
          display:inline-block;
          width:16px;
          height:16px;
-         background:url('~/assets/images/can.svg') no-repeat center;
+         background:url('./img/can.svg') no-repeat center;
          background-size:100%;
          vertical-align: middle;
       }

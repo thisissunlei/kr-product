@@ -77,7 +77,7 @@
         box-sizing: border-box;
         margin: 0px;
         padding: 0px;
-        background-image:url(images/tuxing.png); 
+        background-image:url(./images/tuxing.png); 
 
         background-size: 100% 100%;
         .title-num{
@@ -141,7 +141,7 @@
             // bottom: -8px;
             top: 50%;
             margin-top: -8px;
-            background-image:url(images/end_icon.svg); 
+            background-image:url(./images/end_icon.svg); 
             background-size: 100% 100%;
         }
     }

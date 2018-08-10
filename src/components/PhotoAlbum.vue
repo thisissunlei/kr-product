@@ -198,7 +198,7 @@ export default {
         position: absolute;
         right:20px;
         top:20px;
-        background: url('~/assets/images/close.svg') no-repeat center center;
+        background: url(./images/close.svg) no-repeat center center;
         background-size:100% 100%;
 
     }

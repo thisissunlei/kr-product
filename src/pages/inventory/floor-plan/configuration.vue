@@ -89,7 +89,7 @@ export default {
                 display:inline-block;
                 width:16px;
                 height:16px;
-                background:url('~/assets/images/use.svg') no-repeat center;
+                background:url('./img/use.svg') no-repeat center;
                 background-size:100%;
                 vertical-align: middle;
                 margin-right:5px;
@@ -98,7 +98,7 @@ export default {
                 display:inline-block;
                 width:16px;
                 height:16px;
-                background:url('~/assets/images/can.svg') no-repeat center;
+                background:url('./img/can.svg') no-repeat center;
                 background-size:100%;
                 vertical-align: middle;
                 margin-right:5px;
