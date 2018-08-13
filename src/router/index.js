@@ -15,27 +15,43 @@ export default new Router({
     {
       path: '/inventory/goods-library',
       name: 'GoodsLibrary',
-      component: GoodsLibrary
+      component: GoodsLibrary,
+      meta: {
+        title: '工位商品-氪空间后台管理系统'
+      }
     },
     {
       path: '/inventory/daily-inventory',
       name: 'DailyInventory',
-      component: DailyInventory
+      component: DailyInventory,
+      meta: {
+        title: '每日库存查询-氪空间后台管理系统'
+      }
+
     },
     {
       path: '/inventory/optional-inventory',
       name: 'OptionalInventory',
-      component: OptionalInventory
+      component: OptionalInventory,
+      meta: {
+        title: '可租商品查询-氪空间后台管理系统'
+      }
     },
     {
       path: '/inventory/floor-plan',
       name: 'FloorPlan',
-      component: FloorPlan
+      component: FloorPlan,
+      meta: {
+        title: '库存平面图-氪空间后台管理系统'
+      }
     },
     {
       path: '/community/attract-investment',
       name: 'AttractInvestment',
-      component: AttractInvestment
+      component: AttractInvestment,
+      meta: {
+        title: '社区招商情况-氪空间后台管理系统'
+      }
     },
     {
       path: '/operation/community',
