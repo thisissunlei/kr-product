@@ -24,7 +24,7 @@ const envs = {
         'plugins':'',
     },
 }
-const pluginsDomain  = envs[process.env.NODE_ENV].plugins+'/admin-plugins';
+const pluginsDomain  = envs[process.env.NODE_ENV].plugins+'/plugins';
 const jsFiles = [
     pluginsDomain+'/nav/1.0.0/nav.js',
     'https://web.krspace.cn/kr-op/echarts/4.1.0/echarts.min.js',
