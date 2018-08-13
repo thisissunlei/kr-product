@@ -10,7 +10,7 @@ const AttractInvestment = () => import('pages/community/attract-investment/index
 const Community = () => import('pages/operation/community/index.vue')
 const VisitorsRecord = () => import('pages/operation/visitors-to-record/index.vue')
 export default new Router({
-  mode: 'history',
+  // mode: 'history',
   routes: [
     {
       path: '/inventory/goods-library',
