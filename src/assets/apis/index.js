@@ -1,77 +1,28 @@
+import OrderApi from "./order";
+import OrderManageApi from "./orderManage";
+import ContractCenter from "./contractCenter";
+import apiPublic from "./apiPublic";
+import BillApi from "./bill";
+import MemberApi from "./member";
+import Settlement from "./settlement";
+import operationsCenter from "./operationsCenter";
+import OperationApi from "./operation";
+import NewMain from "./newMain";
+import Basic from "./basic";
+import projectSetting from "./projectSetting";
+import Inventory from "./inventory";
+import Calculator from "./calculator";
+import Smarthardware from "./smarthardware";
+import Krmeeting from "./krmeeting";
+import DoorRelationship from "./doorRelationship";
+import KrmeetingRoom from "./krmeetingRoom";
+import ProductGoods from './productGoods';
+import comment from './comment';
+import DevTool from './devTool';
+import FinancialtransferApply from "./financialtransferApply.js";
+import doorPermmision from './doorPermmision.js';
+import KrmeetingSeat from "./krmeetingSeat.js";
 
-import OrderApi from './order';
-import OrderManageApi from './orderManage';
-import ContractCenter from './contractCenter'
-import apiPublic from './apiPublic'
-import BillApi from './bill.js';
-import MemberApi from './member.js'
-import Settlement from './settlement.js';
-import operationsCenter from './operationsCenter'
-import OperationApi from './operation.js';
-import NewMain from './newMain.js';
-import Basic from './basic.js';
-import projectSetting from './projectSetting';
-import Inventory from './inventory.js';
-import Calculator from './calculator.js';
-import Smarthardware from './smarthardware.js';
-import Krmeeting from './krmeeting.js';
-import DoorRelationship from './doorRelationship.js';
-import KrmeetingRoom from './krmeetingRoom.js';
-import ProductGoods from './productGoods.js';
-let ddd  = {
-  //账单中心--客户接口--优化后
-  'get-payment-customer-like': {
-    url: '/api/krspace-pay/payment/customer/like',
-    method: 'get'
-  },
-  "typePage":{
-    url:'/api/pm/discuss/list/type/page',
-    method:'get'
-  },
-  "actions-add":{
-    url:'/api/pm/discuss/actions/add',
-    method:'post'
-  },
-  "actions-delete":{
-    url:'/api/pm/discuss/actions/delete',
-    method:'delete'
-  },
-  'get-vue-upload-url': {
-    url: '/api/krspace-op-web/sys/upload-policy',
-    method: 'get'
-},
-  'list-type-code': {
-    url: '/api/pm/form-field/list/type/code',
-    method: 'get'
-},
-'list-type-code-write': {
-  url: '/api/pm/form-field/list/type/code/write',
-  method: 'get'
-},
-
-'get-enum-all-data':{
-  url:'/api/krspace-sso-web/sys/enmu',
-  method:'get'
-},
-'member-detail-list':{
-  url:'/api/pm/member-detail/list',
-  method:'get'
-},
-'member-actions-edit':{
-  url:'/api/pm/member-detail/actions/edit',
-  method:'get'
-}
-,
-  'list-type-code-detail': {
-    url: '/api/pm/form-field/list/type/detail',
-    method: 'get'
-},
-'roleActionCheck':{
-    url:'/api/pm/role/action/check',
-    method: 'get'
-}
-
-}
 
 export default {
   ...OrderApi,
@@ -93,5 +44,9 @@ export default {
   ...DoorRelationship,
   ...KrmeetingRoom,
   ...ProductGoods,
-  ...ddd
+  ...comment,
+  ...DevTool,
+  ...FinancialtransferApply,
+  ...doorPermmision,
+  ...KrmeetingSeat
 }
