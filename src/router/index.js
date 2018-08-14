@@ -3,20 +3,7 @@ import Router from 'vue-router';
 import newRoute from './newRouter.js';
 Vue.use(Router)
 
-console.log('dd',typeof newRoute.port,newRoute.port);
-var portArr=newRoute.port.split('\n');
-console.log('dd',portArr);
-if(portArr&&portArr.length){
-  portArr.map((item,index)=>{
-      console.log('svf',item);
-  })
-}
 newRoute.port;
-if(newRoute.routes&&newRoute.routes.length){
-  newRoute.routes.map((item,index)=>{
-      item.component=eval(item.component);
-  })
-}
 export default new Router({routes:newRoute.routes})
 
 // import Vue from 'vue'

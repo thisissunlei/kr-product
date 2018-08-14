@@ -56,7 +56,7 @@ for(var i=0;i<filesList.length;i++){
         var item=filesList[i].split('pages')[1];
         var switchItem=item.split('/index.vue')[0].replace(/\//g,'R').replace(/-/g,'R');
         var routeItem=item.split('/index.vue')[0];
-        var routeObj={path:routeItem,name:switchItem,component:switchItem};
+        var routeObj={path:routeItem,name:switchItem};
         var port='const '+switchItem+' = () => import("pages'+item+'")';
         portStr+=port+"\n";
         newRou.push(routeObj);
