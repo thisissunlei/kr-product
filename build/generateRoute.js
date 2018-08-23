@@ -1,6 +1,5 @@
 var fs = require('fs')
   
-  
 //遍历文件夹，获取所有文件夹里面的文件信息
 /*
  * @param path 路径
@@ -54,16 +53,19 @@ var portStr='';
 for(var i=0;i<filesList.length;i++){
     if(filesList[i].indexOf('index.vue')!=-1){
         var item=filesList[i].split('pages')[1];
-        var switchItem=item.split('/index.vue')[0].replace(/\//g,'R').replace(/-/g,'R');
+        var switchItem=item.split('/index.vue')[0].split('/');
+        var switchStr='';
+        switchItem.map((item,index)=>{
+            if(item){
+                switchStr=switchStr?switchStr+'-'+item:item;
+            }
+        })
         var routeItem=item.split('/index.vue')[0];
-        var routeObj={path:routeItem,name:switchItem};
-        var port='const '+switchItem+' = () => import("pages'+item+'")';
-        portStr+=port+"\n";
+        var routeObj={path:routeItem,name:switchStr};
         newRou.push(routeObj);
     }
 }
 
 var strRou=JSON.stringify(newRou);
-var strPort=JSON.stringify(portStr);
-strs='module.exports={routes:'+strRou+',port:'+strPort+'}';
+strs='module.exports={routes:'+strRou+'}';
 writeFile("../src/router/newRouter.js",strs);
