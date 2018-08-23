@@ -3,8 +3,16 @@ import Router from 'vue-router';
 import newRoute from './newRouter.js';
 Vue.use(Router)
 
-newRoute.port;
-export default new Router({routes:newRoute.routes})
+let rou=newRoute.routes;
+if(rou&&rou.length){
+    rou.map((item,index)=>{
+        let itemRou='pages'+item.path;
+        console.log('item',itemRou);
+        item.component=eval('()=>import('+itemRou+')')
+    })
+}
+console.log('rouwwww-',rou)
+export default new Router({routes:rou})
 
 // import Vue from 'vue'
 // import Router from 'vue-router'
@@ -20,40 +28,40 @@ export default new Router({routes:newRoute.routes})
 // export default new Router({
 //   // mode: 'history',
 //   routes: [
-//     {
-//       path: '/inventory/goods-library',
-//       name: 'GoodsLibrary',
-//       component: GoodsLibrary
-//     },
-//     {
-//       path: '/inventory/daily-inventory',
-//       name: 'DailyInventory',
-//       component: DailyInventory
-//     },
-//     {
-//       path: '/inventory/optional-inventory',
-//       name: 'OptionalInventory',
-//       component: OptionalInventory
-//     },
-//     {
-//       path: '/inventory/floor-plan',
-//       name: 'FloorPlan',
-//       component: FloorPlan
-//     },
-//     {
-//       path: '/community/attract-investment',
-//       name: 'AttractInvestment',
-//       component: AttractInvestment
-//     },
-//     {
-//       path: '/operation/community',
-//       name: 'Community',
-//       component: Community
-//     },
-//     {
-//       path: '/operation/visitors-to-record',
-//       name: 'VisitorsRecord',
-//       component: VisitorsRecord
-//     }
+//     // {
+//     //   path: '/inventory/goods-library',
+//     //   name: 'inventory-goods-library',
+//     //   component: ()=>import('pages/inventory/goods-library')
+//     // },
+//     // {
+//     //   path: '/inventory/daily-inventory',
+//     //   name: 'DailyInventory',
+//     //   component: DailyInventory
+//     // },
+//     // {
+//     //   path: '/inventory/optional-inventory',
+//     //   name: 'OptionalInventory',
+//     //   component: OptionalInventory
+//     // },
+//     // {
+//     //   path: '/inventory/floor-plan',
+//     //   name: 'FloorPlan',
+//     //   component: FloorPlan
+//     // },
+//     // {
+//     //   path: '/community/attract-investment',
+//     //   name: 'AttractInvestment',
+//     //   component: AttractInvestment
+//     // },
+//     // {
+//     //   path: '/operation/community',
+//     //   name: 'Community',
+//     //   component: Community
+//     // },
+//     // {
+//     //   path: '/operation/visitors-to-record',
+//     //   name: 'VisitorsRecord',
+//     //   component: VisitorsRecord
+//     // }
 //   ]
 // })
