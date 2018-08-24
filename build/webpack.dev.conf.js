@@ -4,15 +4,33 @@ const webpack = require('webpack')
 const config = require('../config')
 const merge = require('webpack-merge')
 const path = require('path')
+var chokidar = require('chokidar');
 const baseWebpackConfig = require('./webpack.base.conf')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const portfinder = require('portfinder')
 const pluginsDomain = require('../config/plugins.env');
-const HOST = process.env.HOST
-const PORT = process.env.PORT && Number(process.env.PORT)
+const HOST = process.env.HOST;
+const PORT = process.env.PORT && Number(process.env.PORT);
+const templateFile = chokidar.watch(path.join(__dirname,'../src/pages'));
+const autoRoute =require('../build/automaticRoute/generateRoute');
+autoRoute();
 
+templateFile.on('ready', () => {
+  templateFile.on('add', (path) => {
+    autoRoute();
+  });
+  templateFile.on('unlink', (path) => {
+    autoRoute();
+  });
+  templateFile.on('addDir', (path) => {
+    autoRoute();
+  });
+  templateFile.on('unlinkDir', (path) => {
+    autoRoute();
+  });
+})
 
 const devWebpackConfig = merge(baseWebpackConfig, {
   module: {
