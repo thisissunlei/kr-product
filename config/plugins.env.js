@@ -31,6 +31,8 @@ const jsFiles = [
     'https://web.krspace.cn/kr-op/umeditor/ueditor.config.js',
     'https://web.krspace.cn/kr-op/umeditor/ueditor.all.js',
     'https://web.krspace.cn/kr-op/umeditor/lang/zh-cn/zh-cn.js',
+    'https://web.krspace.cn/kr-op/go/1.8.14/go.js',
+    'https://web.krspace.cn/plugins/watermark.js'
 ]
 const cssFiles = [
     // pluginsDomain+'/iview/2.8.0/styles/iview.css' ,

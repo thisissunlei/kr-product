@@ -15,7 +15,13 @@ Vue.prototype.$http = http;
 Object.keys(filters).forEach(key => {
   Vue.filter(key, filters[key])
 })
-
+router.beforeEach((to, from, next) => {
+  /* 路由发生变化修改页面title */
+  if (to.meta.title) {
+    document.title = to.meta.title
+  }
+  next()
+})
 Vue.use(iView)
 
 new Vue({
