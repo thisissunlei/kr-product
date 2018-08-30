@@ -13,10 +13,28 @@ const portfinder = require('portfinder')
 const pluginsDomain = require('../config/plugins.env');
 const HOST = process.env.HOST;
 const PORT = process.env.PORT && Number(process.env.PORT);
+const templateComponent = chokidar.watch(path.join(__dirname,'../src/components'));
 const templateFile = chokidar.watch(path.join(__dirname,'../src/pages'));
 const autoRoute =require('../build/automaticRoute/generateRoute');
+const autoComponents =require('../build/automaticComponent/generateComponent');
 autoRoute();
-
+autoComponents();
+// component
+templateComponent.on('ready', () => {
+  templateComponent.on('add', (path) => {
+    autoComponents();
+  });
+  templateComponent.on('unlink', (path) => {
+    autoComponents();
+  });
+  templateComponent.on('addDir', (path) => {
+    autoComponents();
+  });
+  templateComponent.on('unlinkDir', (path) => {
+    autoComponents();
+  });
+})
+// router
 templateFile.on('ready', () => {
   templateFile.on('add', (path) => {
     autoRoute();
